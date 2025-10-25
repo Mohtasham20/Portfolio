@@ -1,0 +1,107 @@
+
+:root{
+    --max-width: 1100px;
+    --accent: #0b84ff;
+    --muted: #666;
+    --bg: #f7f8fb;
+    --card: #ffffff;
+    --radius: 12px;
+    --gap: 1rem;
+    font-size: 16px;
+  }
+  
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+  body{background:url('https://wallpaperaccess.com/full/5651990.jpg') no-repeat center center fixed;background-size:cover;color:#111;line-height:1.5}
+  .container{max-width:var(--max-width);margin:0 auto;padding:1rem;background:rgba(255,255,255,0.85);border-radius:12px}
+  
+ 
+  .site-header{backdrop-filter:blur(6px);position:sticky;top:0;z-index:40;
+   border-bottom:1px solid rgba(16,24,40,0.06); width: 100%;}
+  .header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between; padding: 0.3rem 2rem;}
+  .logo{font-weight:700;text-decoration:none;color:var(--accent)}
+  
+ 
+  .nav{display:flex;flex-direction:column;gap:.5rem;padding:1rem 0}
+  .nav a{color:#111;text-decoration:none;padding: 0.3rem 1rem;border-radius:8px}
+  .nav a:hover{background:#eef6ff}
+  
+  
+  .nav-toggle{position:absolute;left:-9999px}
+  .nav-toggle-label{width:36px;height:36px;display:inline-flex;align-items:center;
+    justify-content:center;border-radius:8px;cursor:pointer}
+  .nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after
+  {display:block;width:18px;height:2px;background:#222;border-radius:2px;position:relative}
+  .nav-toggle-label span::before, .nav-toggle-label span::after{content:"";position:absolute;left:0}
+  .nav-toggle-label span::before{top:-6px}
+  .nav-toggle-label span::after{top:6px}
+  
+  
+  .nav-toggle:checked + .nav-toggle-label span{background:transparent}
+  .nav-toggle:checked + .nav-toggle-label span::before{transform:rotate(45deg);top:0}
+  .nav-toggle:checked + .nav-toggle-label span::after{transform:rotate(-45deg);top:0}
+  
+ 
+  .nav{max-height:0;overflow:hidden;transition:max-height .28s ease}
+  .nav-toggle:checked ~ .nav{max-height:400px}
+  
+  
+  .hero{padding:2rem 0}
+  .hero-inner{display:flex;flex-direction:column;gap:1rem;align-items:center}
+  .hero-text{max-width:40rem}
+  .hero-text h1{margin:0 0 .5rem;font-size:1.6rem}
+  .hero-image img{width:100%;height:auto;border-radius:16px;box-shadow:0 8px 30px rgba(10,20,40,0.06)}
+  .btn{display:inline-block;padding:.65rem 1rem;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border:none}
+  
+  
+  .about{padding:1.5rem 0}
+  .skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem;}
+  .skill{background:var(--card);padding:.5rem .8rem;border-radius:999px;border:1px solid rgba(16,24,40,.04)}
+  
+  
+  .projects{padding:1.5rem 0;margin-top:2rem;}
+  .projects-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+  .project-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(16,24,40,0.05)}
+  .project-card img{width:100%;height:180px;object-fit:cover}
+  .project-body{padding:1rem}
+  .project-link{display:inline-block;margin-top:.5rem;color:var(--accent);text-decoration:none}
+  
+  
+  .services{padding:1.2rem 0;margin-top:2rem;}
+  .service-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem}
+  
+  
+  .contact{padding:1.5rem 0;margin-top:2rem;}
+  .contact-form{display:flex;flex-direction:column;gap:.6rem;max-width:680px}
+  .contact-form input,.contact-form textarea{padding:.6rem;border-radius:8px;border:1px solid rgba(16,24,40,.08);font-size:1rem}
+  .contact-form label{font-weight:600}
+  .contact-form button{width:fit-content}
+  
+  
+  .site-footer{padding:1rem 0;border-top:1px solid rgba(16,24,40,0.04);margin-top:2rem;
+    backdrop-filter:blur(4px)}
+  .footer-inner{display:flex;flex-direction:column;align-items:center;gap:.6rem}
+  .footer-nav{display:flex;gap:1rem}
+  .footer-nav a{text-decoration:none;color:var(--muted)}
+  
+  
+  @media (min-width:700px){
+    .nav{flex-direction:row;max-height:none;position:static}
+    .nav-toggle-label{display:none}
+    .hero-inner{flex-direction:row;align-items:center;gap:2rem}
+    .hero-image{flex:1}
+    .hero-text{flex:1}
+    .projects-grid{grid-template-columns:repeat(3,1fr)}
+    .project-card img{height:200px}
+    .footer-inner{flex-direction:row;justify-content:space-between}
+  }
+  
+  
+  a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(11,132,255,0.18);outline-offset:3px}
+  
+ 
+  @media (min-width:1000px){
+    .container{padding:2rem}
+  }
+  
+  
