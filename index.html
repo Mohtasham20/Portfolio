@@ -1,0 +1,145 @@
+
+
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My Portfolio — Web Engineering Assignment 01</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portfolio website showcasing design & development work.">
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">MyPortfolio</a>
+  
+        
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+          <span></span>
+        </label>
+  
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+  
+   
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Hi — I’m a Full Stack Developer.</h1>
+            <p>I build dynamic, scalable web applications from front end to back end.
+               Here’s a selection of my work, including a smart helmet project. I focus on clean architecture, efficient APIs, and seamless user experiences.</p>
+            <a class="btn" href="#projects">View Projects</a>
+          </div>
+          <div class="hero-image" aria-hidden="true">
+          
+            <img src="Images/Developer.avif"alt="Code">
+          </div>
+        </div>
+      </section>
+  
+      <!-- About -->
+      <section id="about" class="container about">
+        <h2>About Me</h2>
+        <p>I build full-stack applications that solve real-world problems. My workflow includes planning,
+           development, testing, deployment, and optimization.</p>
+        <div class="skills">
+          <div class="skill">Frontend Development</div>
+          <div class="skill">Backend Development</div>
+          <div class="skill">API Integration</div>
+          <div class="skill">Database Design</div>
+        </div>
+      </section>
+  
+      <!-- Projects -->
+      <section id="projects" class="projects container">
+        <h2>Selected Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.JZ0crN7heZJK18DlXTSRZAHaFC?pid=Api&P=0&h=220" alt="Smart Helmet concept">
+            <div class="project-body">
+              <h3>Smart Helmet Concept</h3>
+              <p>A connected helmet with integrated safety sensors, HUD and companion app.</p>
+              <a href="#" class="project-link">Read case study</a>
+            </div>
+          </article>
+  
+          <article class="project-card">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.cu01uBNaJ4npgZQAGBbjRgHaFQ?pid=Api&P=0&h=220" alt="Game development project">
+            <div class="project-body">
+              <h3>Game Development</h3>
+              <p>Interactive 3D game built with engaging mechanics and immersive user experiences.</p>
+              <a href="#" class="project-link">Read case study</a>
+            </div>
+            
+          </article>
+  
+          <article class="project-card">
+            <img src="https://wallpapers.com/images/hd/food-delivery-digital-art-ws82iegrpv0jd59j.jpg" alt="Food delivery app">
+            <div class="project-body">
+              <h3>Food Delivery Platform</h3>
+              <p>Full-stack web application for ordering, tracking, and managing food deliveries.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+  
+      <!-- Services -->
+      <section id="services" class="container services">
+        <h2>Services</h2>
+        <ul class="service-list">
+          <li>Web Application Development</li>
+          <li>Frontend & Backend Architecture</li>
+          <li>API Development & Integration</li>
+          <li>Database Design & Management</li>
+          <li>Deployment & Maintenance</li>
+        </ul>
+      </section>
+  
+      <!-- Contact form (interactive element) -->
+      <section id="contact" class="container contact">
+        <h2>Contact Me</h2>
+        <p>Want to work together or learn more about a project? Send a message — no spam, please.</p>
+  
+        <!-- Simple accessible contact form (no external processing) -->
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+  
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+  
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+  
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+       <!--Footer-->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year">2025</span> MyPortfolio — Crafted with HTML & CSS</p>
+        <nav class="footer-nav">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </nav>
+      </div>
+    </footer>
+  
+  </body>
+  </html>
+  
+  
+
+  
